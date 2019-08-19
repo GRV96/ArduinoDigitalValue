@@ -5,8 +5,11 @@
 class DigitalValue
 {
     public:
-        DigitalValue();
+        DigitalValue(int value = -1);
         ~DigitalValue();
+
+        bool hasChanged();
+        static bool isDigital(int value);
 
         int getValue();
         void setValue(int value);

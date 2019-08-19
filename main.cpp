@@ -1,16 +1,19 @@
 #include <iostream>
 
 #include "digitalvalue.h"
+#include "tests/digitalValuetests.h"
 
 using namespace std;
 
 int main()
 {
-    DigitalValue dg;
-    cout << "Inital value: " << dg.getValue() << endl;
+    testAll();
 
-    dg.setValue(7);
-    cout << "New value: " << dg.getValue() << endl;
+    DigitalValue dv1;
+    cout << "Inital value: " << dv1.getValue() << endl;
+
+    DigitalValue dv2(7);
+    cout << "New value: " << dv2.getValue() << endl;
 
     return EXIT_SUCCESS;
 }

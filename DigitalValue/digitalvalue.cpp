@@ -3,15 +3,17 @@
 #define HIGH 1
 #define LOW 0
 
-using namespace std;
-
-DigitalValue::DigitalValue()
+DigitalValue::DigitalValue(int value)
 {
-    m_value = -1;
+    m_value = value;
     m_previousValue = -1;
 }
 
 DigitalValue::~DigitalValue() {}
+
+bool DigitalValue::hasChanged() {return m_value!=m_previousValue;}
+
+bool DigitalValue::isDigital(int value) {return value==LOW || value==HIGH;}
 
 int DigitalValue::getValue() {return m_value;}
 
