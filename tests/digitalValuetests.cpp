@@ -25,6 +25,7 @@ void testHasChanged()
     DigitalValue dv1;
     assert(!dv1.hasChanged());
     dv1.setValue(0);
+    assert(dv1.hasChanged());
 
     DigitalValue dv2(1);
     assert(dv2.hasChanged());
