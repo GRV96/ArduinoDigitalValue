@@ -8,10 +8,10 @@ class DigitalValue
         DigitalValue(int value = -1);
         ~DigitalValue();
 
-        bool hasChanged();
+        bool hasChanged() const;
         static bool isDigital(int value);
 
-        int getValue();
+        int getValue() const;
         bool setValue(int value);
 
     private:

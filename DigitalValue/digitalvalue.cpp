@@ -12,11 +12,11 @@ DigitalValue::DigitalValue(int value)
 
 DigitalValue::~DigitalValue() {}
 
-bool DigitalValue::hasChanged() {return m_value!=m_previousValue;}
+bool DigitalValue::hasChanged() const {return m_value!=m_previousValue;}
 
 bool DigitalValue::isDigital(int value) {return value==LOW || value==HIGH;}
 
-int DigitalValue::getValue() {return m_value;}
+int DigitalValue::getValue() const {return m_value;}
 
 bool DigitalValue::setValue(int value)
 {
