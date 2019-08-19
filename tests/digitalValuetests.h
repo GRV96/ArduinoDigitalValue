@@ -2,8 +2,9 @@
 #define DIGITALVALUETESTS_H_INCLUDED
 
 void testAll();
-void testConstructorAndAccessor();
-void testHasChanged();
 void testIsDigitalValue();
+void testConstructorAndAccessor();
+void testMutatorAndAccessor();
+void testHasChanged();
 
 #endif // DIGITALVALUETESTS_H_INCLUDED

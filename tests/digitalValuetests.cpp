@@ -5,19 +5,37 @@
 
 void testAll()
 {
-    testConstructorAndAccessor();
-    testHasChanged();
     testIsDigitalValue();
+    testConstructorAndAccessor();
+    testMutatorAndAccessor();
+    testHasChanged();
 }
 
 void testConstructorAndAccessor()
 {
-    DigitalValue dv1;
-    DigitalValue dv2(0);
-    DigitalValue dv3(1);
+    DigitalValue dv1(-2);
+    DigitalValue dv2; //m_value = -1
+    DigitalValue dv3(0);
+    DigitalValue dv4(1);
+    DigitalValue dv5(2);
     assert(dv1.getValue()==-1);
-    assert(dv2.getValue()==0);
-    assert(dv3.getValue()==1);
+    assert(dv2.getValue()==-1);
+    assert(dv3.getValue()==0);
+    assert(dv4.getValue()==1);
+    assert(dv5.getValue()==-1);
+}
+
+void testMutatorAndAccessor()
+{
+    DigitalValue dv;
+    assert(!dv.setValue(-2));
+    assert(dv.getValue()==-1);
+    assert(dv.setValue(0));
+    assert(dv.getValue()==0);
+    assert(dv.setValue(1));
+    assert(dv.getValue()==1);
+    assert(!dv.setValue(2));
+    assert(dv.getValue()==1); //1 is the last valid value recorded.
 }
 
 void testHasChanged()

@@ -12,7 +12,7 @@ class DigitalValue
         static bool isDigital(int value);
 
         int getValue();
-        void setValue(int value);
+        bool setValue(int value);
 
     private:
         int m_value;

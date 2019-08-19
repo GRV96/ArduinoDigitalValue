@@ -1,12 +1,13 @@
 #include "digitalvalue.h"
 
+#define DEFAULT -1
 #define HIGH 1
 #define LOW 0
 
 DigitalValue::DigitalValue(int value)
 {
-    m_value = value;
-    m_previousValue = -1;
+    m_value = isDigital(value)? value: DEFAULT;
+    m_previousValue = DEFAULT;
 }
 
 DigitalValue::~DigitalValue() {}
@@ -17,8 +18,10 @@ bool DigitalValue::isDigital(int value) {return value==LOW || value==HIGH;}
 
 int DigitalValue::getValue() {return m_value;}
 
-void DigitalValue::setValue(int value)
+bool DigitalValue::setValue(int value)
 {
+    if(!isDigital(value)) {return false;}
     m_previousValue = m_value;
     m_value = value;
+    return true;
 }

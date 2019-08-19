@@ -1,2 +1,2 @@
 # ArduinoDigitalValue
-A C++ class that represents Arduino's digital values (HIGH or LOW)
+A C++ class that represents Arduino's digital values (HIGH and LOW)
