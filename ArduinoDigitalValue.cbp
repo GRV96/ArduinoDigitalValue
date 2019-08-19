@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="DigitalValue" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="DigitalValue" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -32,7 +34,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="DigitalValue/digitalvalue.cpp" />
+		<Unit filename="DigitalValue/digitalvalue.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="tests/digitalValuetests.cpp" />
+		<Unit filename="tests/digitalValuetests.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

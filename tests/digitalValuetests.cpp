@@ -8,7 +8,16 @@ void testAll()
     testIsDigitalValue();
     testConstructorAndAccessor();
     testMutatorAndAccessor();
+    testGetOpposite();
     testHasChanged();
+}
+
+void testIsDigitalValue()
+{
+    assert(!DigitalValue::isDigital(-1));
+    assert(DigitalValue::isDigital(0));
+    assert(DigitalValue::isDigital(1));
+    assert(!DigitalValue::isDigital(2));
 }
 
 void testConstructorAndAccessor()
@@ -38,6 +47,16 @@ void testMutatorAndAccessor()
     assert(dv.getValue()==1); //1 is the last valid value recorded.
 }
 
+void testGetOpposite()
+{
+    DigitalValue dv1;
+    DigitalValue dv2(0);
+    DigitalValue dv3(1);
+    assert(dv1.getOpposite()==-1);
+    assert(dv2.getOpposite()==1);
+    assert(dv3.getOpposite()==0);
+}
+
 void testHasChanged()
 {
     DigitalValue dv1;
@@ -49,10 +68,32 @@ void testHasChanged()
     assert(dv2.hasChanged());
 }
 
-void testIsDigitalValue()
+void testIsHigh()
 {
-    assert(!DigitalValue::isDigital(-1));
-    assert(DigitalValue::isDigital(0));
-    assert(DigitalValue::isDigital(1));
-    assert(!DigitalValue::isDigital(2));
+    DigitalValue dv1; //m_value = -1
+    DigitalValue dv2(0);
+    DigitalValue dv3(1);
+    assert(!dv1.isHigh());
+    assert(!dv2.isHigh());
+    assert(dv3.isHigh());
+}
+
+void testIsLow()
+{
+    DigitalValue dv1; //m_value = -1
+    DigitalValue dv2(0);
+    DigitalValue dv3(1);
+    assert(!dv1.isLow());
+    assert(dv2.isLow());
+    assert(!dv3.isLow());
+}
+
+void testIsUndefined()
+{
+    DigitalValue dv1; //m_value = -1
+    DigitalValue dv2(0);
+    DigitalValue dv3(1);
+    assert(dv1.isUndefined());
+    assert(!dv2.isUndefined());
+    assert(!dv3.isUndefined());
 }

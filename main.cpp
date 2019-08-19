@@ -10,10 +10,10 @@ int main()
     testAll();
 
     DigitalValue dv1;
-    cout << "Inital value: " << dv1.getValue() << endl;
+    cout << "dv1: " << dv1.getValue() << endl;
 
     DigitalValue dv2(7);
-    cout << "New value: " << dv2.getValue() << endl;
+    cout << "dv2: " << dv2.getValue() << endl;
 
     return EXIT_SUCCESS;
 }

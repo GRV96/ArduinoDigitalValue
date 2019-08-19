@@ -5,6 +5,10 @@ void testAll();
 void testIsDigitalValue();
 void testConstructorAndAccessor();
 void testMutatorAndAccessor();
+void testGetOpposite();
 void testHasChanged();
+void testIsHigh();
+void testIsLow();
+void testIsUndefined();
 
 #endif // DIGITALVALUETESTS_H_INCLUDED
