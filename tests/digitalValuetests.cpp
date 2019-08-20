@@ -1,7 +1,7 @@
 #include <assert.h>
 
-#include "digitalvalue.h"
-#include "digitalValuetests.h"
+#include "digitalValue.h"
+#include "digitalValueTests.h"
 
 void testAll()
 {

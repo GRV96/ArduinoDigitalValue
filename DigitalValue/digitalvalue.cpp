@@ -1,4 +1,4 @@
-#include "digitalvalue.h"
+#include "digitalValue.h"
 
 #define DEFAULT -1
 #define HIGH 1
@@ -11,16 +11,6 @@ DigitalValue::DigitalValue(int value)
 }
 
 DigitalValue::~DigitalValue() {}
-
-bool DigitalValue::hasChanged() const {return m_value!=m_previousValue;}
-
-bool DigitalValue::isDigital(int value) {return value==LOW || value==HIGH;}
-
-bool DigitalValue::isHigh() const {return m_value==HIGH;}
-
-bool DigitalValue::isLow() const {return m_value==LOW;}
-
-bool DigitalValue::isUndefined() const {return m_value==DEFAULT;}
 
 int DigitalValue::getOpposite() const
 {
@@ -36,6 +26,16 @@ int DigitalValue::getOpposite() const
 }
 
 int DigitalValue::getValue() const {return m_value;}
+
+bool DigitalValue::hasChanged() const {return m_value!=m_previousValue;}
+
+bool DigitalValue::isDigital(int value) {return value==LOW || value==HIGH;}
+
+bool DigitalValue::isHigh() const {return m_value==HIGH;}
+
+bool DigitalValue::isLow() const {return m_value==LOW;}
+
+bool DigitalValue::isUndefined() const {return m_value==DEFAULT;}
 
 bool DigitalValue::setValue(int value)
 {
