@@ -39,6 +39,8 @@ void testMutatorAndAccessor()
     DigitalValue dv;
     assert(!dv.setValue(-2));
     assert(dv.getValue()==-1);
+    assert(!dv.setValue(-1));
+    assert(dv.getValue()==-1);
     assert(dv.setValue(0));
     assert(dv.getValue()==0);
     assert(dv.setValue(1));

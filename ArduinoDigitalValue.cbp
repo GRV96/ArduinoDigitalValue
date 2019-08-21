@@ -34,11 +34,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="DigitalValue/digitalvalue.cpp" />
-		<Unit filename="DigitalValue/digitalvalue.h" />
+		<Unit filename="DigitalValue/digitalValue.cpp" />
+		<Unit filename="DigitalValue/digitalValue.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="tests/digitalValuetests.cpp" />
-		<Unit filename="tests/digitalValuetests.h" />
+		<Unit filename="tests/digitalValueTests.cpp" />
+		<Unit filename="tests/digitalValueTests.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
