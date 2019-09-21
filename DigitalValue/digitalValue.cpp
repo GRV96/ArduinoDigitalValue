@@ -14,7 +14,12 @@ DigitalValue::~DigitalValue() {}
 
 int DigitalValue::getOpposite() const
 {
-    switch(m_value)
+    return getOppositeOf(m_value);
+}
+
+int DigitalValue::getOppositeOf(int value)
+{
+    switch(value)
     {
     case HIGH:
         return LOW;

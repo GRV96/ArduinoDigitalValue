@@ -51,6 +51,10 @@ void testMutatorAndAccessor()
 
 void testGetOpposite()
 {
+    assert(DigitalValue::getOppositeOf(-1)==-1);
+    assert(DigitalValue::getOppositeOf(0)==1);
+    assert(DigitalValue::getOppositeOf(1)==0);
+    assert(DigitalValue::getOppositeOf(2)==-1);
     DigitalValue dv1;
     DigitalValue dv2(0);
     DigitalValue dv3(1);

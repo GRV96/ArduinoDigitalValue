@@ -28,6 +28,7 @@ class DigitalValue
         DigitalValue(int value = -1);
         ~DigitalValue();
         int getOpposite() const;
+        static getOppositeOf(int value);
         int getValue() const;
         bool hasChanged() const;
         static bool isDigital(int value);
