@@ -22,10 +22,9 @@
 #ifndef DIGITALVALUE_H
 #define DIGITALVALUE_H
 
-class DigitalValue
-{
+class DigitalValue {
     public:
-        DigitalValue(int value = -1);
+        DigitalValue(int value=-1);
         ~DigitalValue();
         int getOpposite() const;
         static getOppositeOf(int value);
@@ -38,8 +37,8 @@ class DigitalValue
         bool setValue(int value);
 
     private:
-        int m_value;
-        int m_previousValue;
+        int m_nValue;
+        int m_nPreviousValue;
 };
 
 #endif // DIGITALVALUE_H

@@ -5,8 +5,7 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
     testAll();
 
     DigitalValue dv1(19);

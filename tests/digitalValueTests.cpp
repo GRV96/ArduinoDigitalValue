@@ -3,8 +3,7 @@
 #include "digitalValue.h"
 #include "digitalValueTests.h"
 
-void testAll()
-{
+void testAll() {
     testIsDigitalValue();
     testConstructorAndAccessor();
     testMutatorAndAccessor();
@@ -12,59 +11,54 @@ void testAll()
     testHasChanged();
 }
 
-void testIsDigitalValue()
-{
+void testIsDigitalValue() {
     assert(!DigitalValue::isDigital(-1));
     assert(DigitalValue::isDigital(0));
     assert(DigitalValue::isDigital(1));
     assert(!DigitalValue::isDigital(2));
 }
 
-void testConstructorAndAccessor()
-{
+void testConstructorAndAccessor() {
     DigitalValue dv1(-2);
     DigitalValue dv2; //m_value = -1
     DigitalValue dv3(0);
     DigitalValue dv4(1);
     DigitalValue dv5(2);
-    assert(dv1.getValue()==-1);
-    assert(dv2.getValue()==-1);
-    assert(dv3.getValue()==0);
-    assert(dv4.getValue()==1);
-    assert(dv5.getValue()==-1);
+    assert(dv1.getValue() == -1);
+    assert(dv2.getValue() == -1);
+    assert(dv3.getValue() == 0);
+    assert(dv4.getValue() == 1);
+    assert(dv5.getValue() == -1);
 }
 
-void testMutatorAndAccessor()
-{
+void testMutatorAndAccessor() {
     DigitalValue dv;
     assert(!dv.setValue(-2));
-    assert(dv.getValue()==-1);
+    assert(dv.getValue() == -1);
     assert(!dv.setValue(-1));
-    assert(dv.getValue()==-1);
+    assert(dv.getValue() == -1);
     assert(dv.setValue(0));
-    assert(dv.getValue()==0);
+    assert(dv.getValue() == 0);
     assert(dv.setValue(1));
-    assert(dv.getValue()==1);
+    assert(dv.getValue() == 1);
     assert(!dv.setValue(2));
-    assert(dv.getValue()==1); //1 is the last valid value recorded.
+    assert(dv.getValue() == 1); //1 is the last valid value recorded.
 }
 
-void testGetOpposite()
-{
-    assert(DigitalValue::getOppositeOf(-1)==-1);
-    assert(DigitalValue::getOppositeOf(0)==1);
-    assert(DigitalValue::getOppositeOf(1)==0);
-    assert(DigitalValue::getOppositeOf(2)==-1);
+void testGetOpposite() {
+    assert(DigitalValue::getOppositeOf(-1) == -1);
+    assert(DigitalValue::getOppositeOf(0) == 1);
+    assert(DigitalValue::getOppositeOf(1) == 0);
+    assert(DigitalValue::getOppositeOf(2) == -1);
     DigitalValue dv1;
     DigitalValue dv2(0);
     DigitalValue dv3(1);
-    assert(dv1.getOpposite()==-1);
-    assert(dv2.getOpposite()==1);
-    assert(dv3.getOpposite()==0);
+    assert(dv1.getOpposite() == -1);
+    assert(dv2.getOpposite() == 1);
+    assert(dv3.getOpposite() == 0);
 }
 
-void testHasChanged()
-{
+void testHasChanged() {
     DigitalValue dv1;
     assert(!dv1.hasChanged());
     dv1.setValue(0);
@@ -74,8 +68,7 @@ void testHasChanged()
     assert(dv2.hasChanged());
 }
 
-void testIsHigh()
-{
+void testIsHigh() {
     DigitalValue dv1; //m_value = -1
     DigitalValue dv2(0);
     DigitalValue dv3(1);
@@ -84,8 +77,7 @@ void testIsHigh()
     assert(dv3.isHigh());
 }
 
-void testIsLow()
-{
+void testIsLow() {
     DigitalValue dv1; //m_value = -1
     DigitalValue dv2(0);
     DigitalValue dv3(1);
@@ -94,8 +86,7 @@ void testIsLow()
     assert(!dv3.isLow());
 }
 
-void testIsUndefined()
-{
+void testIsUndefined() {
     DigitalValue dv1; //m_value = -1
     DigitalValue dv2(0);
     DigitalValue dv3(1);
