@@ -10,5 +10,6 @@ void testHasChanged();
 void testIsHigh();
 void testIsLow();
 void testIsUndefined();
+void testSwitching();
 
 #endif // DIGITALVALUETESTS_H_INCLUDED

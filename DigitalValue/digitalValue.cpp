@@ -38,7 +38,15 @@ bool DigitalValue::isUndefined() const {return m_nValue == DEFAULT;}
 
 bool DigitalValue::setValue(int nValue) {
     if(!isDigital(nValue)) {return false;}
+    setValueNoCheck(nValue);
+    return true;
+}
+
+void DigitalValue::setValueNoCheck(int nValue) {
     m_nPreviousValue = m_nValue;
     m_nValue = nValue;
-    return true;
+}
+
+void DigitalValue::switchValue() {
+    setValueNoCheck(getOpposite());
 }

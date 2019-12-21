@@ -23,6 +23,10 @@
 #define DIGITALVALUE_H
 
 class DigitalValue {
+    private:
+        int m_nValue;
+        int m_nPreviousValue;
+
     public:
         DigitalValue(int nValue=-1);
         ~DigitalValue();
@@ -35,10 +39,10 @@ class DigitalValue {
         bool isLow() const;
         bool isUndefined() const;
         bool setValue(int nValue);
+        void switchValue();
 
     private:
-        int m_nValue;
-        int m_nPreviousValue;
+        void setValueNoCheck(int nValue);
 };
 
 #endif // DIGITALVALUE_H

@@ -32,7 +32,7 @@ void testConstructorAndAccessor() {
 }
 
 void testMutatorAndAccessor() {
-    DigitalValue oDv;
+    DigitalValue oDv; //m_nValue = -1
     assert(!oDv.setValue(-2));
     assert(oDv.getValue() == -1);
     assert(!oDv.setValue(-1));
@@ -50,7 +50,7 @@ void testGetOpposite() {
     assert(DigitalValue::getOppositeOf(0) == 1);
     assert(DigitalValue::getOppositeOf(1) == 0);
     assert(DigitalValue::getOppositeOf(2) == -1);
-    DigitalValue oDv1;
+    DigitalValue oDv1; //m_nValue = -1
     DigitalValue oDv2(0);
     DigitalValue oDv3(1);
     assert(oDv1.getOpposite() == -1);
@@ -59,7 +59,7 @@ void testGetOpposite() {
 }
 
 void testHasChanged() {
-    DigitalValue oDv1;
+    DigitalValue oDv1; //m_nValue = -1
     assert(!oDv1.hasChanged());
     oDv1.setValue(0);
     assert(oDv1.hasChanged());
@@ -93,4 +93,16 @@ void testIsUndefined() {
     assert(oDv1.isUndefined());
     assert(!oDv2.isUndefined());
     assert(!oDv3.isUndefined());
+}
+
+void testSwitching(){
+    DigitalValue oDv1; //m_nValue = -1
+    DigitalValue oDv2(0);
+    DigitalValue oDv3(1);
+    oDv1.switchValue();
+    oDv2.switchValue();
+    oDv3.switchValue();
+    assert(oDv1.getValue() == -1);
+    assert(oDv2.getValue() == 1);
+    assert(oDv3.getValue() == 0);
 }
