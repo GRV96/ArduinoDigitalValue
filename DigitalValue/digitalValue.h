@@ -24,17 +24,17 @@
 
 class DigitalValue {
     public:
-        DigitalValue(int value=-1);
+        DigitalValue(int nValue=-1);
         ~DigitalValue();
         int getOpposite() const;
-        static getOppositeOf(int value);
+        static getOppositeOf(int nValue);
         int getValue() const;
         bool hasChanged() const;
-        static bool isDigital(int value);
+        static bool isDigital(int nValue);
         bool isHigh() const;
         bool isLow() const;
         bool isUndefined() const;
-        bool setValue(int value);
+        bool setValue(int nValue);
 
     private:
         int m_nValue;

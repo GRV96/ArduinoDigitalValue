@@ -8,14 +8,14 @@ using namespace std;
 int main() {
     testAll();
 
-    DigitalValue dv1(19);
-    cout << "dv1: " << dv1.getValue() << endl;
+    DigitalValue oDv1(19);
+    cout << "oDv1: " << oDv1.getValue() << endl;
 
-    DigitalValue dv2(0);
-    cout << "dv2: " << dv2.getValue() << endl;
+    DigitalValue oDv2(0);
+    cout << "oDv2: " << oDv2.getValue() << endl;
 
-    DigitalValue dv3(1);
-    cout << "dv3: " << dv3.getValue() << endl;
+    DigitalValue oDv3(1);
+    cout << "oDv3: " << oDv3.getValue() << endl;
 
     return EXIT_SUCCESS;
 }
